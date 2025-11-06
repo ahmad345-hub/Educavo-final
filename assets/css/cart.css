@@ -90,6 +90,13 @@ body{ height:1000px; margin:0; }
 @media (max-width:780px){
   .joining{ display:none !important; }
 }
+@media (max-width:430px){
+  .information{ 
+    margin-top: 20px;
+    margin-bottom: 30px;
+    line-height: 15px;
+     }
+}
 
 
 .main-navbar {
@@ -309,7 +316,6 @@ color: inherit;
   background-color:#e9f7fa;padding:5px;flex:0 0 auto;
 }
 
-/* كمية */
 .mq{
   width:90px;height:42px;
   border:1px solid var(--line);
@@ -358,6 +364,12 @@ color: inherit;
   .cart-table td:first-child{ 
     border-top:none;justify-content:flex-end;
   }
+  .we td{
+    margin-left: 400px !important ;
+  }
+  .we input{
+    width: 10px;
+  }
 
   .cart-table td:nth-child(2)::before{content:"Product";font-weight:600;color:var(--muted);margin-inline-end:10px}
   .cart-table td:nth-child(3)::before{content:"Price";font-weight:600;color:var(--muted);margin-inline-end:10px}
@@ -391,10 +403,41 @@ color: inherit;
   }
   .btn-orange{width:100%}
 }
+@media (max-width: 576px){
+  .we td{
+    margin-left: 350px !important ;
+  }
+  .we input{
+    width: 100px;
+    padding-left: 200px;
+    
+  }
+  
+}
 
-@media (max-width: 480px){
+@media (min-width: 327px )and (max-width:432px) {
   .cart-img{width:56px;height:56px}
   .mq{width:74px;height:38px}
+  .we input{
+    width: 90%;
+    padding-left: 200px;
+  
+  }
+  .we{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    margin: auto;
+    
+  }
+  .we button{
+    width: 90%;
+    padding: 10px;
+  }
+  
 }
 
 
@@ -464,6 +507,104 @@ color: inherit;
   .nnn input{ width:100%; }     
   .mq{ width:72px;height:36px; } 
 }
+.cart-actions {
+  flex-wrap: wrap;
+}
+
+.cart-actions .coupon-gap input {
+  width: 100%;         /* يشغل كامل div */
+  box-sizing: border-box; /* padding لا يخرج العنصر من العرض */
+}
+
+.cart-actions .coupon-gap button,
+.cart-actions > button {
+  box-sizing: border-box;
+}
+
+/* للموبايل الصغير جداً ≤480px */
+@media (max-width: 480px) {
+  .cart-actions {
+    flex-direction: column !important;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .cart-actions .coupon-gap {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .cart-actions .coupon-gap button,
+  .cart-actions > button {
+    width: 100% !important; 
+  }
+
+  .cart-actions .coupon-gap input {
+    padding-left: 10px; 
+  }
+}
+
+
+@media (min-width: 481px) and (max-width: 767.98px) {
+  .cart-actions {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .cart-actions .coupon-gap {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .cart-actions .coupon-gap button,
+  .cart-actions > button {
+    width: 100%;
+  }
+}
+
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .cart-actions {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .cart-actions .coupon-gap {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .cart-actions .coupon-gap button,
+  .cart-actions > button {
+    width: 100%;
+  }
+}
+
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .cart-actions {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .cart-actions .coupon-gap {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .cart-actions .coupon-gap button,
+  .cart-actions > button {
+    width: 100%;
+  }
+}
+
 
 .newsletter{
   background:#141d31;

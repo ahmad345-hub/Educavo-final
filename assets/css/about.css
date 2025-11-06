@@ -75,6 +75,14 @@ body{ height:1000px; margin:0; }
 @media (max-width:780px){
   .joining{ display:none !important; }
 }
+@media (max-width:430px){
+  .information{ 
+    margin-top: 20px;
+    margin-bottom: 30px;
+    line-height: 15px;
+     }
+}
+
 
 
 .main-navbar {
