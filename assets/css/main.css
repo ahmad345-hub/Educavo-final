@@ -96,8 +96,9 @@ color: #fff;
 color: #fff;
     border: 1px solid #eee;
     width: 32px;
-    display: block;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
     font-size: 14px;
     height: 32px;
@@ -109,6 +110,12 @@ position: absolute;
 left: 120px;
 bottom: -13px;
 
+}
+.fa-shopping-bag{
+  transition: color 0.3s ease;
+}
+.fa-shopping-bag:hover{
+  color: #FF5421;
 }
 /* موبايل */
 @media (max-width: 575.98px) {
