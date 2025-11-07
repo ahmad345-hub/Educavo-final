@@ -48,6 +48,19 @@ body{ height:1000px; margin:0; }
   box-shadow:none;
   cursor:pointer;
 }
+.information li a{
+  transition: color 0.3s ease;
+}
+.information li a:hover{
+  color: #FF5421;
+}
+.joining li a{
+  transition: color 0.3s ease;
+}
+
+.joining li a:hover{
+  color: #FF5421;
+}
 
 @media (max-width:1400px){
   .location{ width:100%; }

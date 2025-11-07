@@ -24,6 +24,12 @@ body{ height:1000px; margin:0; }
   align-items:center;
   gap:32px;
 }
+.information li a{
+  transition: color 0.3s ease;
+}
+.information li a:hover{
+  color: #FF5421;
+}
 
 .joining{
   display:flex;
@@ -47,6 +53,13 @@ body{ height:1000px; margin:0; }
   outline:0;
   box-shadow:none;
   cursor:pointer;
+}
+.joining li a{
+  transition: color 0.3s ease;
+}
+
+.joining li a:hover{
+  color: #FF5421;
 }
 
 @media (max-width:1400px){
