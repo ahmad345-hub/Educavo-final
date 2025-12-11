@@ -34,6 +34,54 @@ left: 45px;
 .nav-link{
   color: #FFF;
 }
+.change {
+  background-color: #FFFFFF;
+  height: 100px;
+  padding: 10px 20px; /* لو فيه تعديل على padding */
+  transition: background-color 0.4s ease, height 0.4s ease, padding 0.4s ease;
+}
+
+.change ul a {
+  color: #111111;
+  transition: color 0.4s ease;
+}
+
+.navbar.change #pagesDropdown {
+  color: #111111 !important;
+  transition: color 0.4s ease;
+}
+
+.navbar.change .icon-links i {
+  color: yellowgreen;
+  transition: color 0.4s ease;
+}
+
+/* ممكن تخصص لون مختلف لكل أيقونة */
+.navbar.change .icon-links .fa-search {
+  color: #111111;
+  transition: color 0.4s ease;
+}
+.navbar.change .icon-links .fa-shopping-bag {
+  color: #111111;
+  transition: color 0.4s ease;
+}
+.navbar.change .icon-links .fa-user {
+  color: #111111 !important;
+  transition: color 0.4s ease;
+}
+.navbar.change .icon-links .fa-bars {
+  color: #111111;
+  transition: color 0.4s ease;
+}
+
+.navbar.change .navbar-brand img {
+  content: url('https://keenitsolutions.com/products/html/educavo/assets/images/dark-logo.png');
+  transition: all 0.4s ease;
+}
+
+.navbar {
+    transition: all 1.2s ease; /* مدة وسلاسة الحركة */
+}
 .navbar a {
   color: white;
   text-decoration: none;
@@ -56,9 +104,11 @@ left: 45px;
 .icon-links:hover{
   color: #ff5421;
 }
+.navbar.change {
+  margin-bottom: 0;
+}
 
-
-.navbar{
+.navbar
     
     width: 1216.8 px;
     height: 120 px;
@@ -71,15 +121,20 @@ left: 45px;
     width: 100%;      
     z-index: 1000;    
     background-color: yellowgreen; 
+      transition: background-color 0.4s ease, padding 0.4s ease;
+      width: 1216.8 px;
+    height: 120 px;
+    margin-top: 20px;
+
 }
+
 .header{
     width: 1917px;
 }
-}
+
 .fa-search{
     color: #ffffff;
-    position: relative;
-    top: 10px;
+    margin-top: 9px;
 }
 .fa-shopping-bag{
 color: #fff;
@@ -93,8 +148,8 @@ color: #fff;
     line-height: 29px;
 }
 .fa-user{
-color: #fff;
-    border: 1px solid #eee;
+color: #fff !important;
+    border: 0.1px solid #eee;
     width: 32px;
     display: flex;
     justify-content: center;
@@ -166,6 +221,9 @@ bottom: -13px;
   .header .as{
   display: none;
   }
+  .fa-bars{
+    display: none;
+  } 
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -181,6 +239,9 @@ bottom: -13px;
     gap: 20px;
   }
   .carousel-item { height: 640px; }
+  .fa-bars {
+    display: none;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
@@ -827,7 +888,34 @@ margin-top: 40px;
 .abstract1 span{font-size:16px;line-height:28px;font-weight:500;color:#ff5421;text-transform:uppercase;margin-bottom:10px}
 .abstract1 h2{font-size:36px;line-height:46px;font-weight:800;color:#031a3d}
 .descriptionn{display:flex;gap:240px}
+.swiper {
+  width: 100%;
+  padding: 40px 0;
+}
 
+.swiper-slide {
+  display: flex;
+  flex-direction: column; /* الصورة + المحتوى عمودياً */
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.swiper-slide img {
+  width: 100%;     /* الصورة تمتد بعرض الـ slide */
+  height: auto;    /* الارتفاع يتغير تلقائياً */
+  object-fit: cover;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.leader {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.swiper-pagination {
+  display: none !important;
+}
 
 .testimonials .testimonial-card .ff img{
   width:70px !important;
@@ -1308,3 +1396,104 @@ hr{
   .events .col-md-4 > img{height:280px}
 }
 
+.info-section {
+    width: 500px;
+    position: fixed; /* ثابت مع التمرير */
+    top: 0;          /* من أعلى الصفحة */
+    right: 0;        /* على يمين الصفحة */
+    height: 100vh;   /* يغطي طول الصفحة */
+    text-align: center;
+    background-color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    z-index: 99;     /* فوق العناصر الأخرى */
+    overflow-y: auto; /* يسمح بالتمرير داخل العنصر إذا المحتوى طويل */
+    box-shadow: -2px 0 10px rgba(0,0,0,0.1); /* اختياري لإظهار فرق */
+    padding: 20px;
+}
+
+.d-none{
+  display: none;
+}
+.info-text {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-size: 18px;
+    color: #444;
+    line-height: 1.7;
+}
+
+.gallery {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.map-container img {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 5px;
+    margin: 40px auto;
+    display: block;
+}
+
+.social {
+    font-size: 24px;
+    margin-top: 25px;
+}
+
+.social i {
+    margin: 0 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.social i:hover {
+    color: #ff5421;
+}
+.fa-xmark {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px; /* حجم الأيقونة */
+    transition: 0.3s; /* للانتقال السلس */
+}
+
+/* عند الـ hover */
+.fa-xmark:hover {
+    background-color: #ff5421;
+    border-radius: 50%; /* تجعلها دائرة */
+    color: white; /* لون الأيقونة داخل الدائرة */
+    transform: scale(0.7); /* تكبير بسيط عند المرور */
+}
+.fa-bars:hover{
+  color: #FF5421;
+}
+.fa-user:hover{
+  color: #FF5421;
+}
+
+.fa-search:hover{
+  color: #FF5421;
+}
+.fa-bars{
+  transition: color 0.3s ease;
+}
+.fa-user{
+  transition: color 0.3s ease;
+}
